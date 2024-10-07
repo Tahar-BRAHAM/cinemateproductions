@@ -13,6 +13,7 @@ dotenv.config();
 const app = express();
 app.use(cors({
     origin: 'https://www.cinemate-productions.com/',
+    // origin:'http://localhost:3000',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 }));
