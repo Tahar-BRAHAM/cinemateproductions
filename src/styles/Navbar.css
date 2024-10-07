@@ -100,7 +100,7 @@ body {
 @media (max-width: 768px) {
   .navbar.expanded .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
+    padding: 0.2rem;
   }
 
   .navbar.expanded .navbar-nav {
@@ -112,6 +112,7 @@ body {
     color: white !important;
     margin: 0.5rem 0;
     text-align: left; /* Align text to the left */
+    font-size: 12px;
   }
 
   .navbar .navbar-toggler-icon {

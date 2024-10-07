@@ -6,8 +6,7 @@
     background: url('../images/back3.webp') no-repeat center center fixed;
     background-color: rgb(80, 80, 80);
     background-size: cover;
-    background-blend-mode:soft-light;
-    /* filter: brightness(80%) blur(5px); */
+    background-blend-mode: soft-light;
     padding: 30px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -17,14 +16,13 @@
 .about-us-content {
     width: 100%;
     max-width: 1200px;
-    margin-top: 150px; /* Adjust for navbar height */
+    margin-top: 150px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 60px;
     border-radius: 10px;
     color: white;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
-
 }
 
 @keyframes fadeIn {
@@ -32,19 +30,11 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.about-us-logo {
-    height: 300px;
-    margin-bottom: 10px;
-    /* margin-left: 360px; */
-    animation: fadeIn 2s ease-in-out;
-}
-
 .about-us-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 2.5rem;
     margin-bottom: 6%;
-    text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -52,17 +42,8 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    font-weight: 300;
     line-height: 1.8;
-    text-align:justify;
-    animation: fadeIn 2.5s ease-in-out;
-}
-
-.about-us-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* margin-top: 50px; */
+    text-align: justify;
     animation: fadeIn 2.5s ease-in-out;
 }
 
@@ -70,7 +51,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* margin-top: 50px; */
     animation: fadeIn 2.5s ease-in-out;
 }
 
@@ -84,8 +64,14 @@
 .about-us-owner-text {
     flex: 1;
     font-size: 1rem;
-    font-weight: 300;
     text-align: left;
+}
+
+.about-us-logo {
+    height: 300px;
+    margin: 20px auto 10px; /* Center the logo */
+    display: block; /* Make it behave like a block element */
+    animation: fadeIn 2s ease-in-out;
 }
 
 p b {
@@ -93,23 +79,19 @@ p b {
     font-weight: 600;
 }
 
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     .about-us-content {
         margin-top: 120px;
         padding: 40px;
     }
-    .about-us-title {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 2.5rem;
-        margin-bottom: 6%;
-        text-align: center;
-        animation: fadeIn 2s ease-in-out;
-    }
-    
 
-    .about-us-logo {
-            margin-bottom: 10px;
+    .about-us-title {
+        font-size: 1.8rem;
+    }
+
+    .about-us-text {
+        font-size: 0.9rem;
     }
 
     .about-us-owner {
@@ -122,7 +104,24 @@ p b {
         margin-bottom: 20px;
     }
 
+    .about-us-logo {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-title {
+        font-size: 1.5rem;
+    }
+
     .about-us-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+    .about-us-owner-text {
+        font-size: 0.8rem;
+    }
+
+    .about-us-logo {
+        height: 150px;
     }
 }

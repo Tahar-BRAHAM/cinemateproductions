@@ -1,5 +1,5 @@
-import React from 'react';
-// import './VideoModal.css'; 
+import React from "react";
+// import './VideoModal.css';
 
 const VideoModal = ({ video, onClose }) => {
   return (

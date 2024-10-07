@@ -1,9 +1,8 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
-import axios from 'axios';
-import '../styles/VideoCarousel.css';
-  
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import axios from "axios";
+import "../styles/VideoCarousel.css";
 
-const LazyVideoModal = lazy(() => import('./VideoModal')); // Lazy load the video modal for performance
+const LazyVideoModal = lazy(() => import("./VideoModal")); // Lazy load the video modal for performance
 
 const VideoCarousel = () => {
   const [videos, setVideos] = useState([]);
@@ -12,10 +11,12 @@ const VideoCarousel = () => {
   useEffect(() => {
     const loadVideos = async () => {
       try {
-        const response = await axios.get('/api/videos', { cache: 'force-cache' }); // Cache API calls for faster loading
+        const response = await axios.get("/api/videos", {
+          cache: "force-cache",
+        }); // Cache API calls for faster loading
         setVideos(response.data.data);
       } catch (error) {
-        console.error('Error fetching videos:', error);
+        console.error("Error fetching videos:", error);
       }
     };
     loadVideos();
@@ -33,7 +34,11 @@ const VideoCarousel = () => {
     <div className="video-carousel">
       <div className="video-grid">
         {videos.map((video) => (
-          <VideoTile key={video._id} video={video} onSelect={handleVideoSelect} />
+          <VideoTile
+            key={video._id}
+            video={video}
+            onSelect={handleVideoSelect}
+          />
         ))}
       </div>
 
@@ -48,13 +53,15 @@ const VideoCarousel = () => {
 
 const VideoTile = React.memo(({ video, onSelect }) => (
   <div
-    className={`video-tile ${video.size.width > video.size.height ? 'landscape' : 'portrait'}`}
+    className={`video-tile ${
+      video.size.width > video.size.height ? "landscape" : "portrait"
+    }`}
     onClick={() => onSelect(video)}
   >
     <div className="video-wrapper">
       <img
         loading="lazy" // Lazy load images
-        src={video.thumbnailUrl.replace('.jpg', '.webp')} // Serve WebP thumbnails
+        src={video.thumbnailUrl.replace(".jpg", ".webp")} // Serve WebP thumbnails
         alt={video.title}
         width="100%"
         height="auto"

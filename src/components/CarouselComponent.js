@@ -16,13 +16,15 @@ const images = [
     src: slide1,
     alt: "Image 1 Description",
     title: "CAPTURING MOMENTS, CRAFTING STORIES",
-    popupText: "Transform your vision into stunning visuals with our expert video production services.",
+    popupText:
+      "Transform your vision into stunning visuals with our expert video production services.",
   },
   {
     src: slide2,
     alt: "Image 2 Description",
     title: "FROM CONCEPT TO SCREEN",
-    popupText: "We bring your ideas to life with high-quality video production and creative storytelling.",
+    popupText:
+      "We bring your ideas to life with high-quality video production and creative storytelling.",
   },
   {
     src: slide3,
@@ -34,13 +36,15 @@ const images = [
     src: slide4,
     alt: "Image 4 Description",
     title: "Lights, Camera, Action!",
-    popupText: "Experience the magic of top-notch video production that captures every detail.",
+    popupText:
+      "Experience the magic of top-notch video production that captures every detail.",
   },
   {
     src: slide5,
     alt: "Image 5 Description",
     title: "VISUALS THAT INSPIRE",
-    popupText: "Creating compelling videos that connect and engage your audience.",
+    popupText:
+      "Creating compelling videos that connect and engage your audience.",
   },
 ];
 
@@ -100,21 +104,43 @@ const CarouselComponent = () => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`tile ${hoveredIndex === index || autoShowIndex === index ? "hovered" : ""}`}
+              className={`tile ${
+                hoveredIndex === index || autoShowIndex === index
+                  ? "hovered"
+                  : ""
+              }`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
               onMouseMove={(e) => handleMouseMove(e, index)}
-              onClick={() => setAutoShowIndex(autoShowIndex === index ? null : index)} // Toggle on touch/click
+              onClick={() =>
+                setAutoShowIndex(autoShowIndex === index ? null : index)
+              } // Toggle on touch/click
             >
               <div
                 className="tile-background"
                 style={{
                   backgroundImage: `url(${image.src})`,
-                  transform: hoveredIndex === index ? `scale(1.1) translate(${(mousePos.x / window.innerWidth) * 10}px, ${(mousePos.y / window.innerHeight) * 10}px)` : 'scale(1)',
+                  transform:
+                    hoveredIndex === index
+                      ? `scale(1.1) translate(${
+                          (mousePos.x / window.innerWidth) * 10
+                        }px, ${(mousePos.y / window.innerHeight) * 10}px)`
+                      : "scale(1)",
                 }}
               ></div>
-              <img src={image.src} alt={image.alt} className="tile-image" loading="lazy" />
-              <div className={`hover-overlay ${hoveredIndex === index || autoShowIndex === index ? "visible" : ""}`}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="tile-image"
+                loading="lazy"
+              />
+              <div
+                className={`hover-overlay ${
+                  hoveredIndex === index || autoShowIndex === index
+                    ? "visible"
+                    : ""
+                }`}
+              >
                 <div className="hover-content">
                   <h3 className="hover-title">{image.title}</h3>
                   <div className="hover-text">

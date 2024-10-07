@@ -42,7 +42,9 @@ const Navbar = ({ authToken, logout }) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top ${isExpanded ? "expanded" : ""} ${isHidden ? "navbar-hidden" : ""}`}
+      className={`navbar navbar-expand-lg fixed-top ${
+        isExpanded ? "expanded" : ""
+      } ${isHidden ? "navbar-hidden" : ""}`}
     >
       <div className="container">
         <Link className="navbar-brand" to="/">
@@ -58,42 +60,73 @@ const Navbar = ({ authToken, logout }) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={`collapse navbar-collapse ${isExpanded ? "show" : ""}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isExpanded ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" exact to="/" onClick={handleNavLinkClick}>
+              <NavLink
+                className="nav-link"
+                exact
+                to="/"
+                onClick={handleNavLinkClick}
+              >
                 HOME
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>
+              <NavLink
+                className="nav-link"
+                to="/about"
+                onClick={handleNavLinkClick}
+              >
                 ABOUT
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/work" onClick={handleNavLinkClick}>
+              <NavLink
+                className="nav-link"
+                to="/work"
+                onClick={handleNavLinkClick}
+              >
                 PORTFOLIO
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/services" onClick={handleNavLinkClick}>
+              <NavLink
+                className="nav-link"
+                to="/services"
+                onClick={handleNavLinkClick}
+              >
                 SERVICES
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact-us" onClick={handleNavLinkClick}>
+              <NavLink
+                className="nav-link"
+                to="/contact-us"
+                onClick={handleNavLinkClick}
+              >
                 CONTACT
               </NavLink>
             </li>
             {authToken && (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/admin" onClick={handleNavLinkClick}>
+                  <NavLink
+                    className="nav-link"
+                    to="/admin"
+                    onClick={handleNavLinkClick}
+                  >
                     ADMIN
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <button className="nav-link btn btn-link" onClick={handleLogout}>
+                  <button
+                    className="nav-link btn btn-link"
+                    onClick={handleLogout}
+                  >
                     LOG-OUT
                   </button>
                 </li>
