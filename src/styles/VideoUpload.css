@@ -1,0 +1,83 @@
+.upload-video {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+  
+  .upload-video h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #515151;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #388E3C;
+  }
+  
+  .loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #4CAF50; /* Green color for the loading bar */
+    margin-top: 10px;
+  }
+  
+  .success-message {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .success-message p {
+    color: #4CAF50; /* Green color for success message */
+    font-weight: bold;
+  }
+  
+  .success-message button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .success-message button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+  }

@@ -1,0 +1,125 @@
+.admin-page {
+  padding: 20px;
+  margin-top: 100px; /* Adjust this value to provide space between the navbar and the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-list {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-item.even {
+  background-color: #f9f9f9;
+}
+
+.video-item.odd {
+  background-color: #fff;
+}
+
+.video-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.video-text {
+  max-width: 400px;
+}
+
+.video-text p {
+  margin: 5px 0;
+}
+
+.video-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #388E3C;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.upload-video {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.upload-video h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #307c34;
+}

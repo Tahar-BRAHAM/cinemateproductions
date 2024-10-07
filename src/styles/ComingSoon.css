@@ -1,0 +1,79 @@
+/* Container for the coming soon page */
+.comingSoonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    background: url('../images/backComingSoon.jpg') no-repeat center center fixed; /* Adjust the path to your background image */
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.comingSoonContent {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.comingSoonLogo {
+    width: 150px; /* Adjust the size of the logo */
+    margin-bottom: 20px;
+}
+
+.comingSoonContent h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.comingSoonContent p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contactInfo {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.contactInfo p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactInfo a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contactIcon {
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.emailIcon {
+    background-image: url('../images/mail.png'); /* Replace with the path to your email icon */
+}
+
+.addressIcon {
+    background-image: url('../images/map.png'); /* Replace with the path to your address icon */
+}
+
+.phoneIcon {
+    background-image: url('../images/phone.png'); /* Replace with the path to your phone icon */
+}

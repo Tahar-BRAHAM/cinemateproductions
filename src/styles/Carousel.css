@@ -1,0 +1,106 @@
+/* Tile styling */
+.tile {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  background: none;
+  margin: 0;
+  height: 100vh;
+  cursor: pointer; /* Add cursor pointer for click indication */
+}
+
+.tile-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: 1;
+  transition: transform 0.1s ease; /* Faster transition for mouse move */
+}
+
+.tile-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  object-fit: cover;
+}
+
+.tile.hovered .tile-image {
+  transform: scale(0.95);
+}
+
+/* Hover overlay styling */
+.hover-overlay {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjusted width to maintain square shape */
+  height: 100%; /* Adjusted height to maintain square shape */
+  max-width: 360px; /* Maximum width to prevent it from becoming too large */
+  max-height: 360px; /* Maximum height to prevent it from becoming too large */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(53, 53, 53, 0.5);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border */
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 3;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure no content spills out */
+}
+
+.tile.hovered .hover-overlay {
+  opacity: 1;
+}
+
+.hover-content {
+  text-align: center;
+  width: 100%;
+  overflow: hidden; /* Hide scrollbar */
+  white-space: pre-wrap; /* Ensure text wraps properly */
+}
+
+.hover-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 36px;
+  text-align:start;
+  overflow: hidden; /* Hide overflow */
+  white-space: pre-wrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  transform: translateX(-100%); /* Initial position */
+  transition: transform 0.5s ease; /* Transition for sliding in */
+}
+
+.tile.hovered .hover-title {
+  transform: translateX(0); /* Slide in from left */
+}
+
+.hover-text {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  overflow: hidden; /* Hide scrollbar */
+  white-space: pre-wrap; /* Ensure text wraps properly */
+  transform: translateX(100%); /* Initial position */
+  transition: transform 0.5s ease; /* Transition for sliding in */
+}
+
+.tile.hovered .hover-text {
+  transform: translateX(0); /* Slide in from right */
+}

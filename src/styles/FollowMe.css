@@ -1,0 +1,112 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: #000; /* Adjust color as per design */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.all-rights {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.follow-me {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.follow-me span {
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    display: block;
+    width: 30px; /* Adjust for smaller screens */
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links .facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-links .instagram:hover {
+    background-color: #e4405f;
+}
+
+.social-links .linkedin:hover {
+    background-color: #0077b5;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .all-rights {
+        margin-bottom: 10px;
+    }
+
+    .social-links a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .follow-me span {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .all-rights {
+        font-size: 10px;
+    }
+
+    .follow-me span {
+        font-size: 8px;
+    }
+
+    .social-links a {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,162 @@
+/* Container for the contact form */
+.contact-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    min-height: 100vh;
+    background: url('../images/contactUsBack.webp') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 20px; /* Adjust padding for better spacing on different screens */
+    box-sizing: border-box;
+}
+
+.contact-us-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly increase transparency for visibility */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.contact-us-title {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center; /* Center the title on all screens */
+}
+
+.form-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: calc(50% - 15px);
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid black;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-button {
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .contact-us-title {
+        font-size: 24px; /* Reduce title size */
+    }
+    .form-group-row {
+        flex-direction: column; /* Stack form fields vertically */
+    }
+    .form-group {
+        min-width: 100%;
+    }
+    .submit-button {
+        font-size: 16px; /* Larger button text on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-us-content {
+        padding: 20px;
+        border-radius: 8px; /* Smaller border radius for smaller screens */
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+    }
+    .submit-button {
+        font-size: 14px; /* Adjust button text size */
+    }
+}

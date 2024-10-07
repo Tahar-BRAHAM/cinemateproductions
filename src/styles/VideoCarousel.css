@@ -1,0 +1,105 @@
+/* Tile styling */
+.video-carousel {
+  padding-top: 200px; /* Adjust based on your navbar height */
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background-color: #565656; /* Simple grey background */
+  margin: 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust 300px as needed */
+  gap: 30px;
+}
+
+.video-tile {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.video-tile:hover {
+  transform: scale(1.05);
+}
+
+.video-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure videos cover the container */
+  pointer-events: none; /* Prevent video from playing on click */
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 10px;
+}
+
+.video-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.video-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal-content video {
+  width: 100%;
+  height: auto;
+}
+
+.modal-content p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}

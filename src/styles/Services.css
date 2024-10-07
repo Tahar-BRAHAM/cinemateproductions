@@ -1,0 +1,110 @@
+/* Base styles for larger screens remain unchanged */
+.service-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: url('../images/back2.webp') no-repeat center center fixed;
+    background-size: cover;
+    padding: 120px 30px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.service-content {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.service-title {
+    text-align: left;
+    margin-bottom: 120px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.service-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.service-section {
+    flex: 0 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.service-carousel {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.service-carousel .carousel .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-description {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    .service-content {
+        width: 100%; /* Make content take full width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .service-title {
+        font-size: 24px; /* Adjust title size for smaller screens */
+        margin-bottom: 60px; /* Adjust margin for smaller screens */
+    }
+
+    .service-sections {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 30px; /* Increase gap between sections */
+    }
+
+    .service-section {
+        flex-basis: 100%; /* Make each section take full width */
+        text-align: left; /* Align text to the left for better readability */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .service-carousel {
+        margin-bottom: 15px; /* Adjust margin for better spacing */
+    }
+
+    .service-heading {
+        font-size: 18px; /* Adjust heading size for smaller screens */
+    }
+
+    .service-description {
+        font-size: 13px; /* Adjust description size for smaller screens */
+    }
+}
